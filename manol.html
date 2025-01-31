@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karen</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>BUNTIS KA?</h1>
+    <button id="yesButton">YES NA YESS</button>
+    <button id="noButton">DILI</button>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+
+        noButton.addEventListener('click', function() {
+            // Random na posisyon sa screen
+            const x = Math.random() * (window.innerWidth - 100); // 100 para sa lapad ng button
+            const y = Math.random() * (window.innerHeight - 50); // 50 para sa taas ng button
+
+            noButton.style.position = 'absolute';
+            noButton.style.left = x + 'px';
+            noButton.style.top = y + 'px';
+        });
+
+        const yesButton = document.getElementById('yesButton');
+        yesButton.addEventListener('click', function() {
+            alert('CONGRATSS');
+        });
+    </script>
+
+</body>
+</html>
